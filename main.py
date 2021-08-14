@@ -1,7 +1,7 @@
 import json
 
 def lambda_handler():
-    message = 'Hello AWS!'
+    message = 'Hello World!'
     print(message)
     return {
         'statusCode': 200,
