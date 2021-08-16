@@ -1,4 +1,6 @@
 import json
+import requests
+
 def get_last_list():
     url = 'https://wm3ce6ayrl.execute-api.us-east-2.amazonaws.com/default/python-aws'
     response = requests.get(url, params=(), headers=())
