@@ -1,7 +1,7 @@
 import json
 
 def lambda_handler(event, context):
-    message = "<meta charset=\"UTF-8\"> Проверка 1, Проверка 2, Проверка 3"
+    message = "<!DOCTYPE html> <html> <head> <meta charset = \"UTF-8\" > </head> <body> Проверка 1, Проверка 2, Проверка 3 </body> </html>"
     print(message)
     return {
         'statusCode': 200,
