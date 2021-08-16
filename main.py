@@ -1,5 +1,5 @@
 import json
-from requests import get
+import requests
 
 def get_list():
     list = get_last_list()      # get last list
