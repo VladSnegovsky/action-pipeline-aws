@@ -82,7 +82,7 @@ def list_to_str(list):
 
 
 def lambda_handler(event, context):
-    message = list_to_str(get_list())
+    message = "Проверка 1, Проверка 2, Проверка 3"
     print(message)
     return {
         'statusCode': 200,
