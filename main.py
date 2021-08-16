@@ -8,7 +8,7 @@ def get_last_list():
     # response = response[1:-1]
     # list = response.split(",")
     # print(list)
-    return list
+    return response
 
 
 def list_to_str(list):
