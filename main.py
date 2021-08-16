@@ -30,6 +30,20 @@ def delete_record(id):
     requests.delete(url + '/' + str(id), params=(), headers=headers)
 
 
+def update_record(id, record_data):
+    headers = {'Authorization': 'Bearer ' + API,
+               'Content-Type': 'application/json'}
+    data = {
+        "records": [
+            {
+                "id" : id,
+                "fields": record_data
+            }
+        ]
+    }
+    requests.patch(url, json=data, headers=headers)
+
+
 def get_data_n_id(response, id):
     for item in response:
         if item["fields"]["ID"] == id:
@@ -64,9 +78,8 @@ def get_message():
 
     first_record_id, first_record_data = get_data_n_id(response, min)
 
-    delete_record(first_record_id)
     first_record_data["ID"] = max+1
-    add_record(first_record_data)
+    update_record(first_record_id, first_record_data)
 
     return message
 
