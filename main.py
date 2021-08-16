@@ -86,7 +86,7 @@ def lambda_handler(event, context):
     print(message)
     return {
         'statusCode': 200,
-        'body': json.dumps(message)
+        'body': json.dumps(message, ensure_ascii=False)
     }
 
 lambda_handler(None, None)
